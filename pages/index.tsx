@@ -34,7 +34,7 @@ export default function Home() {
                           </div>
                           <input type="search" id="default-search" ref={searchInput}
                                  className="block w-full p-4 pl-10 text-sm border rounded-lg  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                                 placeholder="Type what movie should be about" required />
+                                 placeholder="Type what do you want to watch about" required />
                               <button type="submit"
                                       className="text-white absolute right-2.5 bottom-2.5 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 bg-lightBlue hover:bg-darkBlue focus:ring-blue-800">Search
                               </button>
@@ -44,7 +44,7 @@ export default function Home() {
           </section>
           <div className="flex gap-8 flex-wrap flex-col grow shrink items-start mx-24">
               {plots.map(item =>
-              <div className="relative p-10 rounded-xl binline-block justify-start rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-darkBlue items-start" >
+              <div key={item.title} className="relative p-10 rounded-xl binline-block justify-start rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-darkBlue items-start" >
                   <div className="text-6xl absolute top-4 right-4 opacity-80">🍿</div>
                   <div>
                       <h4 className="opacity-90 text-xl">From {item.director}</h4>
